@@ -1,4 +1,4 @@
-package ch.hotstuff.algorithms;
+package ch.hotstuff.algorithms.quicksort;
 
 import static org.junit.Assert.assertTrue;
 
