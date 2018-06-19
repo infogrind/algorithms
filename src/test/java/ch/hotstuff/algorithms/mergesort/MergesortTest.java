@@ -14,8 +14,6 @@ public class MergesortTest {
 		int[] array =    {2, 3, 5, 1, 9, 10, -1, 3, 100, -3, 0, 0, 0, 4, 4, 4};
 		int[] expected = {-3, -1, 0, 0, 0, 1, 2, 3, 3, 4, 4, 4, 5, 9, 10, 100};
 		Mergesort.mergesort(array);
-
-		System.out.println(Arrays.toString(array));
 		assertArrayEquals(expected, array);
 	}
 
