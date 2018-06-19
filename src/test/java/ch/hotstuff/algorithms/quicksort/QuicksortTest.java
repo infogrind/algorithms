@@ -1,6 +1,6 @@
 package ch.hotstuff.algorithms.quicksort;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
 
@@ -8,20 +8,9 @@ public class QuicksortTest {
 
 	@Test
 	public void quicksortProperlySortsSimpleArray() {
-		int[] array = {2, 3, 5, 1, 9, 10, -1, 3, 100, -3, 0,0,0, 4, 4, 4};
+		int[] array =    {2, 3, 5, 1, 9, 10, -1, 3, 100, -3, 0, 0, 0, 4, 4, 4};
+		int[] expected = {-3, -1, 0, 0, 0, 1, 2, 3, 3, 4, 4, 4, 5, 9, 10, 100};
 		Quicksort.quicksort(array);
-		assertTrue(isSorted(array));
-	}
-
-	private boolean isSorted(int[] array) {
-
-		if (array.length <= 1)
-			return true;
-		else {
-			for (int i = 1; i < array.length; i++)
-				if (array[i] < array[i-1])
-					return false;
-			return true;
-		}
+		assertArrayEquals(expected, array);
 	}
 }
