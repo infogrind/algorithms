@@ -3,10 +3,10 @@ package ch.hotstuff.algorithms.bst;
 public class Node<T extends Comparable<T>> {
 
     private T value;
-    private Node left;
-    private Node right;
+    private Node<T> left;
+    private Node<T> right;
 
-    public Node(T value, Node left, Node right) {
+    public Node(T value, Node<T> left, Node<T> right) {
         this.left = left;
         this.right = right;
         this.value = value;
@@ -16,10 +16,10 @@ public class Node<T extends Comparable<T>> {
     public Node getRight() { return right; }
     public T getValue() { return value; }
 
-    public void setLeft(Node newLeft) {
+    public void setLeft(Node<T> newLeft) {
         left = newLeft;
     }
-    public void setRight(Node newRight) {
+    public void setRight(Node<T> newRight) {
         right = newRight;
     }
     public void setValue(T newValue) {
@@ -63,11 +63,11 @@ public class Node<T extends Comparable<T>> {
             if (hasLeftChild())
                 left.insert(value);
             else
-                left = new Node(value, null, null);
+                left = new Node<T>(value, null, null);
         else // inserted value larger
             if (hasRightChild())
                 right.insert(value);
             else
-                right = new Node(value, null, null);
+                right = new Node<T>(value, null, null);
     }
 }

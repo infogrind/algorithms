@@ -1,7 +1,7 @@
 package ch.hotstuff.algorithms.bst;
 
 public class BST<T extends Comparable<T>> {
-    private Node root;
+    private Node<T> root;
 
     public BST() {
         root = null;
@@ -19,7 +19,7 @@ public class BST<T extends Comparable<T>> {
      */
     public void insert(T value) {
         if (root == null)
-            root = new Node(value, null, null);
+            root = new Node<T>(value, null, null);
         else
             root.insert(value);
     }
