@@ -14,3 +14,4 @@ given:
 - Count number of "2" digits in all numbers from 1 to n
 - [Boyer-Moore majority voting
   algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm)
+- Shortest subarray containing given numbers
